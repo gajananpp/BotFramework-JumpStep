@@ -254,7 +254,7 @@ var Session = (function (_super) {
         dialog.begin(this, args);
         return this;
     };
-    Session.prototype.jumpStep = function (stepNo) {
+    Session.prototype.jumpStep = function (stepNo, args = {}) {
       var id = this.resolveDialogId(this.dialogData.CurrentStep.intent);
       var dialog = this.findDialog(id);
       if (!dialog) {
